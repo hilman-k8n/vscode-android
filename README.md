@@ -4,8 +4,13 @@ Run vscode on android device
 ## Download Termux
 Download and install termux from [release](https://github.com/termux/termux-app/releases) page
 
+## Setup storage
+Open termux and run these command
+```bash
+termux-setup-storage
+```
+
 ## Install proot-distro
-Open termux and run this command
 ```bash
 pkg install proot-distro
 proot-distro install ubuntu
