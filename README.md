@@ -53,6 +53,24 @@ code-tunnel code tunnel --accept-server-license-terms
 ```
 You can also run the tunnel using `code-tunnel` command. See [Custom Alias (optional)](#custom-alias-optional)
 
+## Install ASDF (optional)
+### Install ASDF CLI
+```bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+```
+Update `~/.zshrc` file (see [Update ~/.zshrc](#update-zshrc))
+
+### Install Development tools
+```
+apt install -y build-essential
+
+asdf plugin add python https://github.com/danhper/asdf-python.git
+asdf plugin add gcloud https://github.com/jthegedus/asdf-gcloud.git
+
+asdf install python latest
+asdf install gcloud latest
+```
+
 ## Custom Alias (optional)
 Create alias
 ```bash
@@ -76,10 +94,13 @@ tunnel-start() {
 }
 EOF
 ```
+## Update `~/.zshrc`
 Update `~/.zshrc` (needs [oh my zsh](#install-oh-my-zsh-optional))
 ```
-sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias/g' ~/.zshrc
+sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias\n. $HOME\/.asdf\/asdf.sh/g' ~/.zshrc
 ```
+
+
 
 ## References
 - The VSCode Server Blog Post [https://code.visualstudio.com/blogs/2022/07/07/vscode-server](https://code.visualstudio.com/blogs/2022/07/07/vscode-server)
