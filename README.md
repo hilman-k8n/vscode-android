@@ -65,11 +65,31 @@ Update `~/.zshrc` file (see [Update ~/.zshrc](#update-zshrc))
 apt install -y build-essential locales
 locale-gen "en_US.utf8"
 
-asdf plugin add python https://github.com/danhper/asdf-python.git
-asdf plugin add gcloud https://github.com/jthegedus/asdf-gcloud.git
+apt install -y python3
 
-asdf install python latest
-asdf install gcloud latest
+asdf plugin add gcloud
+asdf plugin add helmfile
+asdf plugin add java
+asdf plugin add k9s
+asdf plugin add krew
+asdf plugin add kubectl
+asdf plugin add kubectx
+asdf plugin add saml2aws
+asdf plugin add yq
+
+cat << EOF > $HOME/.tool-versions
+helmfile 0.149.0
+kubectl 1.24.0
+kubectx 0.9.4
+k9s 0.26.7
+saml2aws 2.36.2
+krew 0.4.3
+java temurin-18.0.0+36
+yq 4.30.8
+gcloud 443.0.0
+EOF
+
+asdf install
 ```
 
 ## Custom Alias (optional)
