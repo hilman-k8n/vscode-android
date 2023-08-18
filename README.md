@@ -62,7 +62,8 @@ Update `~/.zshrc` file (see [Update ~/.zshrc](#update-zshrc))
 
 ### Install Development tools
 ```
-apt install -y build-essential
+apt install -y build-essential locales
+locale-gen "en_US.utf8"
 
 asdf plugin add python https://github.com/danhper/asdf-python.git
 asdf plugin add gcloud https://github.com/jthegedus/asdf-gcloud.git
