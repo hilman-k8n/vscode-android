@@ -49,7 +49,7 @@ mv code /usr/local/bin/code
 
 ## Start VS Code Server
 ```bash
-code-tunnel code tunnel --accept-server-license-terms
+code tunnel --accept-server-license-terms
 ```
 You can also run the tunnel using `code-tunnel` command. See [Custom Alias (optional)](#custom-alias-optional)
 
@@ -103,8 +103,7 @@ alias code-tunnel='code tunnel --accept-server-license-terms'
 
 # kill SSH tunnel
 tunnel-kill() {
-    ps 
-    -ef | grep 'bin/ssh' | awk '{print $2}' | xargs kill -9
+    ps -ef | grep 'bin/ssh' | awk '{print $2}' | xargs kill -9
 }
 
 # start SSH tunnel with Google Cloud IAP
@@ -120,8 +119,6 @@ Update `~/.zshrc` (needs [oh my zsh](#install-oh-my-zsh-optional))
 ```
 sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias\n. $HOME\/.asdf\/asdf.sh/g' ~/.zshrc
 ```
-
-
 
 ## References
 - The VSCode Server Blog Post [https://code.visualstudio.com/blogs/2022/07/07/vscode-server](https://code.visualstudio.com/blogs/2022/07/07/vscode-server)
