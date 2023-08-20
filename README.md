@@ -1,6 +1,25 @@
 # vscode-android
 Run vscode on android device
 
+
+# ToC
+- [Download Termux](#download-termux)
+- [Setup storage](#setup-storage)
+- [Install proot-distro](#install-proot-distro)
+- [Login to Ubuntu](#login-to-ubuntu)
+- [Install deps](#install-deps)
+- [Install Oh My ZSH (optional)](#install-oh-my-zsh-optional)
+- [Update ZSH plugins (optional)](#update-zsh-plugins-optional)
+- [Install VS Code Server](#install-vs-code-server)
+- [Start VS Code Server](#start-vs-code-server)
+- [Install ASDF (optional)](#install-asdf-optional)
+  - [Install ASDF CLI](#install-asdf-cli)
+  - [Install Development tools](#install-development-tools)
+  - [Install gcloud](#install-gcloud)
+- [Custom Alias (optional)](#custom-alias-optional)
+- [Update `~/.zshrc`](#update-zshrc)
+- [References](#references)
+
 ## Download Termux
 Download and install termux from [release](https://github.com/termux/termux-app/releases) page
 
