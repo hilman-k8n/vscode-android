@@ -67,7 +67,6 @@ locale-gen "en_US.utf8"
 
 apt install -y python3
 
-asdf plugin add gcloud
 asdf plugin add helmfile
 asdf plugin add java
 asdf plugin add k9s
@@ -86,10 +85,17 @@ saml2aws 2.36.2
 krew 0.4.3
 java temurin-18.0.0+36
 yq 4.30.8
-gcloud 443.0.0
 EOF
 
 asdf install
+```
+
+### Install gcloud
+```bash
+cd /opt
+curl -o /opt/gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-443.0.0-linux-arm.tar.gz
+tar -xvf gcloud.tar.gz
+./google-cloud-sdk/install.sh
 ```
 
 ## Custom Alias (optional)
