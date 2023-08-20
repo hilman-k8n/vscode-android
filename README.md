@@ -42,7 +42,7 @@ proot-distro login ubuntu
 
 ## Install deps
 ```bash
-PKG_DEPS="git vim curl wget"
+PKG_DEPS="git vim curl unzip wget"
 apt update
 echo $PKG_DEPS | xargs apt install -y
 ```
@@ -93,6 +93,7 @@ asdf plugin add krew
 asdf plugin add kubectl
 asdf plugin add kubectx
 asdf plugin add saml2aws
+asdf plugin add terraform
 asdf plugin add yq
 
 cat << EOF > $HOME/.tool-versions
@@ -104,6 +105,7 @@ saml2aws 2.36.2
 krew 0.4.3
 java temurin-18.0.0+36
 yq 4.30.8
+terraform 1.5.5
 EOF
 
 asdf install
