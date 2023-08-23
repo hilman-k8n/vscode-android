@@ -117,6 +117,9 @@ cd /opt
 curl -o /opt/gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-443.0.0-linux-arm.tar.gz
 tar -xvf gcloud.tar.gz
 ./google-cloud-sdk/install.sh
+
+# GKE auth plugin for GKE 1.26+
+gcloud components install gke-gcloud-auth-plugin
 ```
 
 ## Custom Alias (optional)
