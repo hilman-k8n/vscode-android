@@ -86,6 +86,7 @@ locale-gen "en_US.utf8"
 
 apt install -y python3
 
+asdf plugin add awscli
 asdf plugin add helmfile
 asdf plugin add java
 asdf plugin add k9s
@@ -97,6 +98,7 @@ asdf plugin add terraform
 asdf plugin add yq
 
 cat << EOF > $HOME/.tool-versions
+awscli 2.13.12
 helmfile 0.149.0
 kubectl 1.24.0
 kubectx 0.9.4
