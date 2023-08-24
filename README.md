@@ -55,7 +55,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ## Update ZSH plugins (optional)
 ```bash
-ZSH_PLUGIN_LIST="git kubectl kube-ps1 aws"
+ZSH_PLUGIN_LIST="git kubectl kubectx kube-ps1 aws"
 sed -i "s/^plugins=.*/plugins=($ZSH_PLUGIN_LIST)/g" ~/.zshrc
 ```
 
@@ -149,7 +149,7 @@ EOF
 ## Update `~/.zshrc`
 Update `~/.zshrc` (needs [oh my zsh](#install-oh-my-zsh-optional))
 ```
-sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias\n. $HOME\/.asdf\/asdf.sh/g' ~/.zshrc
+sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias\n. $HOME\/.asdf\/asdf.sh\nPROMPT='$(kube_ps1)'$PROMPT/g' ~/.zshrc
 ```
 
 ## References
