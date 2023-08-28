@@ -42,7 +42,7 @@ proot-distro login ubuntu
 
 ## Install deps
 ```bash
-PKG_DEPS="git vim curl dnsutils unzip wget"
+PKG_DEPS="git vim curl dnsutils jq unzip wget"
 apt update
 echo $PKG_DEPS | xargs apt install -y
 ```
