@@ -141,8 +141,9 @@ tunnel-kill() {
 # start SSH tunnel with Google Cloud IAP
 tunnel-start() {
     instance_prefix=${1:=gke}
+    tunnel_port=${2:=8080}
     local instance=$(gcloud compute instances list | grep ${instance_prefix} | head -n1 | awk '{print $1}')
-    gcloud compute ssh --tunnel-through-iap  --ssh-flag='-D :8080 -fN -o TCPKeepAlive=yes -o ServerAliveInterval=5' $instance
+    gcloud compute ssh --tunnel-through-iap  --ssh-flag="-D :${tunnel_port} -fN -o TCPKeepAlive=yes -o ServerAliveInterval=5" $instance
 }
 EOF
 ```
