@@ -155,7 +155,9 @@ Update `~/.zshrc` (needs [oh my zsh](#install-oh-my-zsh-optional))
 sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias\n. $HOME\/.asdf\/asdf.sh\nPROMPT='$(kube_ps1)'$PROMPT/g' ~/.zshrc
 ```
 
-## Fix issue `/root/.oh-my-zsh/plugins/kube-ps1/kube-ps1.plugin.zsh:27: character not in range`
+## Troubleshooting
+### Fix `character not in range` issue
+If during proot startup there is an output like `/root/.oh-my-zsh/plugins/kube-ps1/kube-ps1.plugin.zsh:27: character not in range`, Execute the following command:
 ```
 sed -i 's/^# Path to your oh-my-zsh installation./# Path to your oh-my-zsh installation.\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8/g' ~/.zshrc
  
