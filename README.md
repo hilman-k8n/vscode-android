@@ -152,7 +152,7 @@ EOF
 ## Update `~/.zshrc`
 Update `~/.zshrc` (needs [oh my zsh](#install-oh-my-zsh-optional))
 ```
-sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias\n. $HOME\/.asdf\/asdf.sh\nPROMPT='$(kube_ps1)'$PROMPT/g' ~/.zshrc
+sed -i 's/^# User configuration/# User configuration\nsource $HOME\/.custom-alias\n. $HOME\/.asdf\/asdf.sh\nsource $HOME\/.krew\/bin\nPROMPT='$(kube_ps1)'$PROMPT/g' ~/.zshrc
 ```
 
 ## Troubleshooting
